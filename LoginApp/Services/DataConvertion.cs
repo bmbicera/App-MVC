@@ -12,14 +12,20 @@ namespace LoginApp.Services
 
         public string ConvertJsonToClass()
         {
-            string json = "{\"DistinguishedName\":\"CN=Jacob Benner,OU=SlaitUsers,OU=Enterprise,DC=cloud,DC=mcc,DC=loc\",\"Name\":\"Jacob Benner\",\"Enabled\":true,\"SamAccountName\":\"jacob.benner\"}," +
-                    "{\"DistinguishedName\":\"CN=Jacob Benner,OU=SlaitUsers,OU=Enterprise,DC=cloud,DC=mcc,DC=loc\",\"Name\":\"A a\",\"Enabled\":false,\"SamAccountName\":\"A.a\"}";
-            Person data = JsonConvert.DeserializeObject<Person>(json);
-            Console.WriteLine("DistinguishedName: " + data.DistinguishedName);
-            Console.WriteLine("Name: " + data.Name);
-            Console.WriteLine("Enabled: " + data.Enabled);
-            Console.WriteLine("SamAccountName: " + data.SamAccountName);
-            return data.DistinguishedName;
+            string json = "[{\"DistinguishedName\":\"CN=Jacob Benner,OU=SlaitUsers,OU=Enterprise,DC=cloud,DC=mcc,DC=loc\",\"Name\":\"Jacob Benner\",\"Enabled\":true,\"SamAccountName\":\"jacob.benner\"},{\"DistinguishedName\":\"CN=A A,OU=A,OU=A,DC=A,DC=A,DC=A\",\"Name\":\"A A\",\"Enabled\":true,\"A\":\"A.A\"}]";
+
+            List<Person> Obj = JsonConvert.DeserializeObject<List<Person>>(json);
+
+            int count = 0;
+            foreach (Person element in Obj)
+            {
+                Console.WriteLine("\nDistinguishedName: " + element.DistinguishedName);
+                Console.WriteLine("Name: " + element.Name);
+                Console.WriteLine("Enabled: " + element.Enabled);
+                Console.WriteLine("SamAccountName: " + element.SamAccountName);
+                count++;
+            }
+            return null;
         }
     }
 
