@@ -6,15 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using LoginApp.Data;
 using LoginApp.Models;
 
 namespace LoginApp.Controllers
 {
     public class UsersController : Controller
     {
-        private Data.UserDBContextEntities db = new Data.UserDBContextEntities();
-
+        
         // GET: Users
         public ActionResult Index()
         {

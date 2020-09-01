@@ -1,4 +1,4 @@
-﻿@model LoginApp.Models.User
+﻿@model LoginApp.Models.AppUserModel
 
 
 @{
@@ -21,9 +21,9 @@
         }
         <table>
             <tr>
-                <td>@Html.LabelFor(a => a.Name)</td>
-                <td>@Html.TextBoxFor(a => a.Name)</td>
-                <td>@Html.ValidationMessageFor(a => a.Name)</td>
+                <td>@Html.LabelFor(a => a.UserName)</td>
+                <td>@Html.TextBoxFor(a => a.UserName)</td>
+                <td>@Html.ValidationMessageFor(a => a.UserName)</td>
             </tr>
             <tr>
                 <td>
@@ -41,7 +41,9 @@
                 <td>
                     <input type="submit" value="Login" />
                 </td>
-                <td></td>
+                <td>
+                    @ViewBag.IsValidated
+                </td>
             </tr>
         </table>
     </fieldset>

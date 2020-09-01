@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginApp", "LoginApp\LoginApp.csproj", "{CE2784C7-D21C-4BCD-B78F-F0CEFBC01FBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOS.ADUsers.PasswordApp", "LoginApp\BOS.ADUsers.PasswordApp.csproj", "{CE2784C7-D21C-4BCD-B78F-F0CEFBC01FBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
